@@ -1,0 +1,482 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    color: $font-color;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    color: $font-color;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    background-color: $background-card;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    
+    .navbar-left {
+    
+        .container-navbar-left {
+            float: left;
+            margin: 5px 20px;
+
+            .slogan {
+                font-size: 14px;
+                margin-top: -5px;
+            }
+        }
+
+    }
+
+    .navbar-right {
+
+        .container-navbar-right {
+            float: right;
+            height: fit-content;
+
+            ul {
+
+                li {
+                    float: left;
+
+                    a {
+                        padding: 0px 25px;
+                        display: block;
+                        float: left;
+                        background-color: $background-button;
+                        line-height: 60px;
+                        transition: all 0.5s;
+
+                        &:hover {
+                            background-color: $orange;
+                        }
+
+                        &:active {
+                            background-color: darken($orange,15%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top {
+
+    padding: 60px 0 0 0;
+
+    .top-wrapper {
+        background:
+            linear-gradient(
+              rgba(0, 0, 0, 0.7), 
+              rgba(0, 0, 0, 0.7)
+            ), url('image/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+        background-size: cover;
+        background-blend-mode: darken;
+        text-align: center;
+        padding: 60px 0 50px 0;
+
+        .avatar-hamster {
+            background-image: url('https://images-ext-1.discordapp.net/external/on70in54InrZ-UDV4jK0ezXBVFUqk4dNfYHIxt-spwk/https/cdn.discordapp.com/icons/878869835805761596/d685fbdc273690a919010e761eda0c00.png');
+            width: 100px;
+            height: 100px;
+
+            background-size: cover;
+            background-position: top center;
+
+            border-radius: 50%;
+            border: 2px solid $font-color;
+            margin: 0px auto;
+            
+
+        }
+
+        h1 {
+            font-size: 48px;
+            letter-spacing: 3px;
+            margin-top: 15px;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            letter-spacing: 1.5px;
+        }
+
+
+    }
+
+}
+
+a.button {
+    height: 50px;
+    width: 200px;
+    margin: 20px auto;
+    background-color: $blue;
+    display: block;
+    line-height: 50px;
+    opacity: 0.7;
+    border-radius: 12px;
+    box-shadow: 0 5px darken($blue,20%);
+    color: #ffffff;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        position: relative;
+        top: 5px;
+        box-shadow: none;
+    }
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 32px;
+    padding: 12px 0;
+
+}
+
+.garis {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 12px;
+}
+
+.job {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .card {
+
+        width: 31%;
+        background: #222;
+        padding: 20px 10px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        transition: all 0.5s;
+
+        .content {
+
+            .job-title {
+                font-size: 23px;
+                font-weight: 500;
+                padding: -10px 0 10px 0;
+                text-transform: capitalize;
+            }
+
+        }
+
+    }
+
+    .light-blue:hover {
+        @include card-hover($light-blue,$light-purple)
+    }
+
+    .orange:hover {
+        @include card-hover($orange,$orange-yellow)
+    }
+
+    .green:hover {
+        @include card-hover($green,$yellow)
+    }
+
+    .purple:hover {
+        @include card-hover($purple,$light-purple);
+        
+    }
+
+}
+
+.language {
+    .language-wrapper {
+        .container {
+            .heading-title {
+
+                h2 {
+                    margin-top: -12px;
+                }
+
+            }
+
+            .languages-bar {
+
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+
+                .container-left {
+                    width: 45%;
+
+                    .name-lang {
+                        text-align: start;
+                        padding: 10px 30px;
+                        letter-spacing: 2px;
+                    }
+
+                    .html-icon {
+                        color: lighten($html,5%);
+                    }
+
+                    .css-icon {
+                        color: $css;
+                    }
+
+                    .js-icon {
+                        color: $js;
+                    }
+
+                    .background-bar {
+                        margin: 0 0 0 20px;
+                        width: 100%;
+                        background-color: $background-button;
+                        height: 30px;
+                        border-radius: 14px;
+
+                        .skill {
+                            text-align: right;
+                            padding: 10px 0;
+                            height: 30px;
+                            border-radius: 14px;
+                        }
+
+                        .html {
+                            width: 85%;
+                            background-color: $html;
+                        }
+
+                        .css {
+                            width: 75%;
+                            background-color: $css;
+                        }
+
+                        .js {
+                            width: 70%;
+                            background-color: $js;
+                        }
+
+                    }
+    
+                }
+    
+                .container-right {
+                    width: 45%;
+
+                    .name-lang {
+                        text-align: start;
+                        padding: 10px 15px;
+                        letter-spacing: 2px;
+                    }
+
+                    .java-icon {
+                        color: $java;
+                    }
+
+                    .php-icon {
+                        color: $php;
+                    }
+
+                    .sql-icon {
+                        color: $sql;
+                    }
+
+                    .background-bar {
+                        margin: 0 40px 0 -10px;
+                        width: 100%;
+                        background-color: $background-button;
+                        height: 30px;
+                        border-radius: 14px;
+
+                        .skill {
+                            text-align: right;
+                            padding: 10px 0;
+                            height: 30px;
+                            border-radius: 14px;
+                        }
+
+                        .php {
+                            width: 20%;
+                            background-color: $php;
+                        }
+
+                        .sql {
+                            width: 25%;
+                            background-color: $sql;
+                        }
+
+                        .java {
+                            width: 90%;
+                            background-color: $java;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.library {
+    .library-wrapper {
+        .container {
+
+            .library-bar {
+
+
+                .container-parent {
+                    margin: 40px 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    .container-left {
+                        width: 33%;
+                        
+                        .name-lib-lang {
+                            text-align: center;
+                            letter-spacing: 2px;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+
+                        .background-lib-bar {
+                            width: 100%;
+                            background-color: $background-button;
+                            border-radius: 15px;
+                            height: 25px;
+                            border-color: $font-color;
+                            border-style: solid;
+                            border-width: 3px;
+
+                            .skill {
+                                padding: 10px 0;
+                                height: 18px;
+                                border-radius: 15px;
+                            }
+                            
+                            .boostrap {
+                                width: 60%;
+                                background-color: $boostrap;
+                            }
+
+                            .sass {
+                                width: 80%;
+                                background-color: $sass;
+                            }
+                        }
+
+                    }
+
+                    .container-center {
+                        width: 33%;
+
+                        .name-lib-lang {
+                            text-align: center;
+                            letter-spacing: 2px;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+
+                        .background-lib-bar {
+                            width: 100%;
+                            background-color: $background-button;
+                            border-radius: 15px;
+                            height: 25px;
+                            border-color: $font-color;
+                            border-style: solid;
+                            border-width: 3px;
+
+                            .skill {
+                                padding: 10px 0;
+                                height: 18px;
+                                border-radius: 15px;
+                            }
+
+                            .react {
+                                width: 60%;
+                                background-color: $react;
+                            }
+
+                            .node {
+                                width: 10%;
+                                background-color: $node;
+                            }
+                        }
+
+                    }
+
+                    .container-right {
+                        width: 33%;
+
+                        .name-lib-lang {
+                            text-align: center;
+                            letter-spacing: 2px;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                        }
+
+                        .background-lib-bar {
+                            width: 100%;
+                            background-color: $background-button;
+                            border-radius: 15px;
+                            height: 25px;
+                            border-color: $font-color;
+                            border-style: solid;
+                            border-width: 3px;
+
+                            .skill {
+                                padding: 10px 0;
+                                height: 18px;
+                                border-radius: 15px;
+                            }
+
+                            .discord {
+                                width: 35%;
+                                background-color: $discord;
+                            }
+
+                            .git {
+                                width: 80%;
+                                background-color: $git;
+                            }
+                            
+
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+    }
+}
